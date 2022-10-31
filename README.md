@@ -4,6 +4,8 @@
 This c# example libary is a SDK for the folidata finance api service. 
 With this SDK you can download end-of-day historic stock prices and prices for other assets like cryptos, indices, etc. 
 
+Checkout the NuGet Package: [![NuGet](https://img.shields.io/nuget/v/Folidata.svg)](https://www.nuget.org/packages/Folidata/)
+
 [![License: MIT](https://img.shields.io/github/license/stefanprodan/AspNetCoreRateLimit.svg)](https://opensource.org/licenses/MIT)
 
 ## Compatibility
