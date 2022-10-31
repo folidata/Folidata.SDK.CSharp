@@ -14,6 +14,7 @@ The library is written in:
 1. [General](#general)
 2. [Requirements](#requirements)
 3. [Documentation](#documentation)
+3. [Dokumentation Deutsch](#documentation-german)
 
 ## General
 This C# example library is an SDK for the folidata finance API service. 
@@ -84,6 +85,68 @@ All given parameters/methods are also possible in the following methods:
 
 ### Key State
 To check your current limits and datapoints count:
+```c#
+var state = await api.GetKeyStateAsync();
+```
+
+## Dokumentation Deutsch
+Die vollständige Dokumentation ist unter folgenden [Link](https://www.folidata.com/documentation) zu finden.
+
+### Init
+Mit dem folgenden Code initialisierst du den HTTP Client mit deinem persönlichen API Key:
+```c#
+using Folidata;
+var key = "YOUR_API_KEY";
+var api = new FolidataApi(key);
+```
+### Liste aller Handelplätze und Symbole
+Eine vollständige Liste aller unterstützten Handelsplätze erhälst du mir nur einer Zeile Code:
+```c#
+var exchanges = await _api.GetExchangeAsync()
+```
+
+Um alle unterstützen Symbole zu erhalten:
+```c#
+var exchanges = await _api.GetSymbolsAsync("US")
+```
+
+Um weitere unterstütze Symbole zu erhalten verwende folgende Methoden:
+- Crypto **GetCryptosAsync()**
+- Forex Pairs **GetForexAsync()**
+- Futures **GetFuturesAsync()**
+
+
+### Historische End-of-day Kurse
+Mit einer Zeile Code erhälst du alle historischen Kurse der Apple Aktie.
+```c#
+var prices = await api.GetPricesAsync("AAPL.US");
+```
+
+Um die Kursdaten eines spezifischen Tages zu erhalten:
+```c#
+var prices = await api.GetPriceAsync("AAPL.US",new DateTime(2022, 01, 02));
+```
+Zeitspanne:
+```c#
+var prices = await api.GetPricesAsync("AAPL.US",new DateTime(2021, 01, 02), new DateTime(2022, 06, 01));
+```
+Sortieren der Ergebnisse:
+```c#
+var prices = await api.GetPricesAsync("AAPL.US", new DateTime(2021, 01, 02), new DateTime(2022, 06, 01), Folidata.Utils.SortMode.DESC);
+```
+Limittieren der Ergebnisse:
+```c#
+var prices = await api.GetPricesAsync("AAPL.US", new DateTime(2021, 01, 02), new DateTime(2022, 06, 01), Folidata.Utils.SortMode.DESC, 100);
+```
+
+Alle oben beschriebenen Parameter gelten auch für die folgenden Kursabfragen:
+- GetCryptoPricesAsync("SHIB-USD")
+- GetForexPricesAsync("USDEUR")
+- GetFuturePricesAsync("GC")
+- GetIndexPricesAsync("GDAXP")
+
+### Aktueller Status deines Datenpakets
+Um die Limits und aktuellen verbrauchten Datenpunkte zu sehen:
 ```c#
 var state = await api.GetKeyStateAsync();
 ```
