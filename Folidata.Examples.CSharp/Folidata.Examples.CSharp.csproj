@@ -3,16 +3,19 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-	  <VersionPrefix>1.0.0</VersionPrefix>
+	  <VersionPrefix>1.0.2</VersionPrefix>
     <Nullable>enable</Nullable>
     <AssemblyName>Folidata</AssemblyName>
     <RootNamespace>Folidata</RootNamespace>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>This C# example library is an SDK for the folidata finance API service.  With this SDK you can download end-of-day historic stock prices and prices for other assets like cryptos, indices, etc. </Description>
-    <PackageProjectUrl>https://www.folidata.com</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/folidata/Folidata.SDK.CSharp</RepositoryUrl>
+	  <PackageProjectUrl>https://www.folidata.com</PackageProjectUrl>
     <PackageIcon>folidata-icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>finance-api;finance-data;financedata-api;stock-data;market-data;boersenkurse;finanzdaten-api;finanz-daten;finanze-daten-schnittstelle;folidata;</PackageTags>
     <Title>This C# example library is an SDK for the folidata finance API service.  With this SDK you can download end-of-day historic stock prices and prices for other assets like cryptos, indices, etc. </Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

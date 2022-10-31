@@ -40,12 +40,12 @@ var api = new FolidataApi(key);
 ### List of stock exchanges and supported symbols
 To get the full list of supported exchanges use this code:
 ```c#
-var exchanges = await _api.GetExchangeAsync()
+var exchanges = await _api.GetExchangeAsync();
 ```
 
 Then you can get all the symbols of a stock exchange:
 ```c#
-var exchanges = await _api.GetSymbolsAsync("US")
+var exchanges = await _api.GetSymbolsAsync("US");
 ```
 
 Other supported lists to get the supported symbols:
@@ -90,34 +90,34 @@ var state = await api.GetKeyStateAsync();
 ```
 
 ## Dokumentation Deutsch
-Die vollst‰ndige Dokumentation ist unter folgenden [Link](https://www.folidata.com/documentation) zu finden.
+Die vollst√§ndige Dokumentation ist unter folgenden [Link](https://www.folidata.com/documentation) zu finden.
 
 ### Init
-Mit dem folgenden Code initialisierst du den HTTP Client mit deinem persˆnlichen API Key:
+Mit dem folgenden Code initialisierst du den HTTP Client mit deinem pers√∂nlichen API Key:
 ```c#
 using Folidata;
 var key = "YOUR_API_KEY";
 var api = new FolidataApi(key);
 ```
-### Liste aller Handelpl‰tze und Symbole
-Eine vollst‰ndige Liste aller unterst¸tzten Handelspl‰tze erh‰lst du mir nur einer Zeile Code:
+### Liste aller Handelpl√§tze und Symbole
+Eine vollst√§ndige Liste aller unterst√ºtzten Handelspl√§tze erh√§lst du mir nur einer Zeile Code:
 ```c#
-var exchanges = await _api.GetExchangeAsync()
+var exchanges = await _api.GetExchangeAsync();
 ```
 
-Um alle unterst¸tzen Symbole zu erhalten:
+Um alle unterst√ºtzen Symbole zu erhalten:
 ```c#
-var exchanges = await _api.GetSymbolsAsync("US")
+var exchanges = await _api.GetSymbolsAsync("US");
 ```
 
-Um weitere unterst¸tze Symbole zu erhalten verwende folgende Methoden:
+Um weitere unterst√ºtze Symbole zu erhalten verwende folgende Methoden:
 - Crypto **GetCryptosAsync()**
 - Forex Pairs **GetForexAsync()**
 - Futures **GetFuturesAsync()**
 
 
 ### Historische End-of-day Kurse
-Mit einer Zeile Code erh‰lst du alle historischen Kurse der Apple Aktie.
+Mit einer Zeile Code erh√§lst du alle historischen Kurse der Apple Aktie.
 ```c#
 var prices = await api.GetPricesAsync("AAPL.US");
 ```
@@ -139,7 +139,7 @@ Limittieren der Ergebnisse:
 var prices = await api.GetPricesAsync("AAPL.US", new DateTime(2021, 01, 02), new DateTime(2022, 06, 01), Folidata.Utils.SortMode.DESC, 100);
 ```
 
-Alle oben beschriebenen Parameter gelten auch f¸r die folgenden Kursabfragen:
+Alle oben beschriebenen Parameter gelten auch f√ºr die folgenden Kursabfragen:
 - GetCryptoPricesAsync("SHIB-USD")
 - GetForexPricesAsync("USDEUR")
 - GetFuturePricesAsync("GC")
