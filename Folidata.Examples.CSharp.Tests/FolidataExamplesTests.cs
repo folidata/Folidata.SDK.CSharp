@@ -28,12 +28,6 @@ public class Tests
         Assert.That(result, Has.Count.GreaterThan(50));
     }
 
-    [Test]
-    public async Task Futures()
-    {
-        var result = await _folidataApi.GetFuturesAsync();
-        Assert.That(result, Has.Count.GreaterThan(50));
-    }
 
     [Test]
     public async Task GetEodAllTime()
@@ -63,18 +57,6 @@ public class Tests
         var limit = await _folidataApi.GetForexPricesAsync(symbol, new DateTime(2022, 01, 02), null, Utils.SortMode.ASC, 100);
         Assert.That(limit, Has.Count.EqualTo(100));
         var singelDay = await _folidataApi.GetForexPriceAsync(symbol, new DateTime(2022, 01, 02));
-        Assert.That(singelDay.Close, Is.GreaterThan(0));
-    }
-
-    [Test]
-    public async Task GetEodFuture()
-    {
-        var symbol = "GC";
-        var result = await _folidataApi.GetFuturePricesAsync(symbol);
-        Assert.That(result, Has.Count.GreaterThan(100));
-        var limit = await _folidataApi.GetFuturePricesAsync(symbol, new DateTime(2022, 01, 02), null, Utils.SortMode.ASC, 100);
-        Assert.That(limit, Has.Count.EqualTo(100));
-        var singelDay = await _folidataApi.GetFuturePriceAsync(symbol, new DateTime(2022, 01, 02));
         Assert.That(singelDay.Close, Is.GreaterThan(0));
     }
 

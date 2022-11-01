@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-	  <VersionPrefix>1.0.2</VersionPrefix>
+	  <VersionPrefix>1.0.3</VersionPrefix>
     <Nullable>enable</Nullable>
     <AssemblyName>Folidata</AssemblyName>
     <RootNamespace>Folidata</RootNamespace>
