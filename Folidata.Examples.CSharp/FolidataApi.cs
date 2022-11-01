@@ -136,55 +136,55 @@ public class FolidataApi
     }
 
     /// <summary>
-    /// get historic end-of-day future price for a defined day
+    /// get historic end-of-day future price for a defined day (future api is just prepared for the future)
     /// </summary>
     /// <param name="symbol">symbol with exchange: {symbole}.{exchangeCode} (AAPL.US)</param>
     /// <param name="date">day of the end-of-day price query.</param>
     /// <returns></returns>
-    public async Task<PriceFutureApiDto> GetFuturePriceAsync(string symbol, DateTime? date)
+    /*public async Task<PriceFutureApiDto> GetFuturePriceAsync(string symbol, DateTime? date)
     {
         symbol = AddFutureExchange(symbol);
         CheckTickerValid(symbol);
         return await _endOfDayAPI.GetPriceAsync<PriceFutureApiDto>(symbol, date);
-    }
+    }*/
 
     /// <summary>
-    /// get all-time historic end-of-day future prices
+    /// get all-time historic end-of-day future prices (future api is just prepared for the future)
     /// </summary>
     /// <param name="symbol">symbol with exchange: {symbole}.{exchangeCode} (AAPL.US)</param>
     /// <param name="sort">sort direction of the result.</param>
     /// <param name="limit">result is limited to this number. 0 = infinity</param>
     /// <returns></returns>
-    public async Task<List<PriceFutureApiDto>> GetFuturePricesAsync(string symbol, SortMode sort = SortMode.ASC, int limit = 0)
+    /*public async Task<List<PriceFutureApiDto>> GetFuturePricesAsync(string symbol, SortMode sort = SortMode.ASC, int limit = 0)
     {
         symbol = AddFutureExchange(symbol);
         CheckTickerValid(symbol);
         return await _endOfDayAPI.GetPricesAsync<List<PriceFutureApiDto>>(symbol, sort, limit);
-    }
+    }*/
 
     /// <summary>
-    /// historic end-of-day future prices in a defined time range
-    /// </summary>
+    /// historic end-of-day future prices in a defined time range (future api is just prepared for the future)
+    /// </summary> 
     /// <param name="symbol">symbol with exchange: {symbole}.{exchangeCode} (AAPL.US)</param>
     /// <param name="from">date from</param>
     /// <param name="to">date to</param>
     /// <param name="sort">sort direction of the result.</param>
     /// <param name="limit">result is limited to this number. 0 = infinity</param>
     /// <returns></returns>
-    public async Task<List<PriceFutureApiDto>> GetFuturePricesAsync(string symbol, DateTime? from, DateTime? to, SortMode sort = SortMode.ASC, int limit = 0)
+    /*public async Task<List<PriceFutureApiDto>> GetFuturePricesAsync(string symbol, DateTime? from, DateTime? to, SortMode sort = SortMode.ASC, int limit = 0)
     {
         symbol = AddFutureExchange(symbol);
         CheckTickerValid(symbol);
         return await _endOfDayAPI.GetPricesAsync<List<PriceFutureApiDto>>(symbol, from, to, sort, limit);
-    }
+    }*/
 
     /// <summary>
-    /// get the full list of all futures
+    /// get the full list of all futures (future api is just prepared for the future)
     /// </summary>
-    public async Task<List<FuturesApiDto>> GetFuturesAsync()
+    /*public async Task<List<FuturesApiDto>> GetFuturesAsync()
     {
         return await _generalAPI.GetFuturesAsync();
-    }
+    }*/
 
     /// <summary>
     /// get historic end-of-day index value for a defined day

@@ -53,7 +53,6 @@ var exchanges = await _api.GetSymbolsAsync("US");
 Other supported lists to get the supported symbols:
 - Crypto **GetCryptosAsync()**
 - Forex Pairs **GetForexAsync()**
-- Futures **GetFuturesAsync()**
 
 
 ### Historical End-Of-Day Prices
@@ -82,7 +81,6 @@ var prices = await api.GetPricesAsync("AAPL.US", new DateTime(2021, 01, 02), new
 All given parameters/methods are also possible in the following methods:
 - GetCryptoPricesAsync("SHIB-USD")
 - GetForexPricesAsync("USDEUR")
-- GetFuturePricesAsync("GC")
 - GetIndexPricesAsync("GDAXP")
 
 ### Key State
@@ -115,7 +113,6 @@ var exchanges = await _api.GetSymbolsAsync("US");
 Um weitere unterstütze Symbole zu erhalten verwende folgende Methoden:
 - Crypto **GetCryptosAsync()**
 - Forex Pairs **GetForexAsync()**
-- Futures **GetFuturesAsync()**
 
 
 ### Historische End-of-day Kurse
@@ -144,7 +141,6 @@ var prices = await api.GetPricesAsync("AAPL.US", new DateTime(2021, 01, 02), new
 Alle oben beschriebenen Parameter gelten auch für die folgenden Kursabfragen:
 - GetCryptoPricesAsync("SHIB-USD")
 - GetForexPricesAsync("USDEUR")
-- GetFuturePricesAsync("GC")
 - GetIndexPricesAsync("GDAXP")
 
 ### Aktueller Status deines Datenpakets
