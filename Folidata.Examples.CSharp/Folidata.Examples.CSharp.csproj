@@ -11,7 +11,7 @@
     <Description>This C# example library is an SDK for the folidata finance API service. With this SDK you can download end-of-day historic stock prices and prices for other assets like cryptos, indices, etc.
 	[DE:] Diese C# Bibliothek ist ein SDK für die folidata Finanzdaten-API. Mit diesem SDK kannst du End-of-day historische Aktienkurse und Kurse anderer Assets wie Kryptowährungen, Indizes und vieles mehr herunterladen.</Description>
 	  <RepositoryUrl>https://github.com/folidata/Folidata.SDK.CSharp</RepositoryUrl>
-	  <PackageProjectUrl>https://github.com/folidata/Folidata.SDK.CSharp</PackageProjectUrl>
+	  <PackageProjectUrl>https://www.folidata.com</PackageProjectUrl>
     <PackageIcon>folidata-icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>finance-api;finance-data;financedata-api;stock-data;market-data;boersenkurse;finanzdaten-api;finanz-daten;finanze-daten-schnittstelle;folidata;</PackageTags>

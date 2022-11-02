@@ -90,7 +90,7 @@ var state = await api.GetKeyStateAsync();
 ```
 
 ## Dokumentation Deutsch
-Die vollständige Dokumentation ist unter folgendem [Link](https://www.folidata.com/documentation) zu finden.
+Die vollständige Dokumentation ist unter folgenden [Link](https://www.folidata.com/documentation) zu finden.
 
 ### Init
 Mit dem folgenden Code initialisierst du den HTTP Client mit deinem persönlichen API Key:
