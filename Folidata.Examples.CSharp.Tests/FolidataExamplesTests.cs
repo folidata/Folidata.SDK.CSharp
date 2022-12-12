@@ -5,7 +5,6 @@ public class Tests
     private readonly string _symbol = "AAPL.US";
     private FolidataApi _folidataApi;
     private string _key = "";
-    // Apple
 
     [Test]
     public async Task Cryptos()

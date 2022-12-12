@@ -6,6 +6,7 @@ public class PriceApiDto
 {
     public double Adjusted { get; set; }
     public double Close { get; set; }
+    public double Volume { get; set; }
 
     [JsonConverter(typeof(Folidata.Extended.DateOnlyJsonConverter))]
     public DateOnly Date { get; set; }
